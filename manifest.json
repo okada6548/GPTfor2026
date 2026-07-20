@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "radiko 安定コントローラー",
+  "version": "1.0.0",
+  "description": "radiko の再生速度変更とタイムフリーのスキップ操作を、公開 Media API だけで安定化します。",
+  "content_scripts": [
+    {
+      "matches": ["https://radiko.jp/*"],
+      "js": ["radiko-controller.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ],
+  "host_permissions": ["https://radiko.jp/*"]
+}
